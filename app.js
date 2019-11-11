@@ -28,6 +28,23 @@ let siseLaius = window.innerWidth;
 //console.log(siseLaius);
 
 // scroll
-scrolY = window.scrollY;
-scrolX = window.scrollX;
-console.log(scrolX);
+//scrolY = window.scrollY;
+//scrolX = window.scrollX;
+//console.log(scrolX);
+
+// location objekt
+let objekt = window.location;
+let hostname = window.location.hostname;
+let port = window.location.port;
+let href = window.location.href;
+let search = window.location.search;
+console.log(hostname);
+console.log(port);
+console.log(href);
+console.log(search);
+
+// redirect
+//window.location.href = 'https://khk.ee';
+
+// reload
+//window.location.reload();
