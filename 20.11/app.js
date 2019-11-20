@@ -1,23 +1,28 @@
 // sündmused
 
-const form = document.querySelector('form');
-const lisaUusYlesanne = document.getElementById('task')
-const text = document.querySelector('h5');
+// lehe kaardi pealkiri
+//document.querySelector('.card-title').addEventListener('click', function(e){
+//    console.log('card-title');
+//})
 
-// kustutame lisaUusYlesanne väärtus
-lisaUusYlesanne.value = '';
+// lehe kaardi sisu
+document.querySelector('.card-content').addEventListener('click', function(e){
+    console.log('card-content');
+})
 
-// formi saatmine
-form.addEventListener('submit', syndmus);
+// delegeerimine
+const kustutaYlesanne = document.querySelector('delete-item');
+kustutaYlesanne.addEventListener('click', kustuta);
 
-function syndmus(e){
-    // logi sündmuse tüüp
-    console.log(`Sündmuse tüüp: ${e.type}`);
-    // kontrollime vormi kaudu saadetud väärtust
-    console.log(lisaUusYlesanne.value);
-    // väljastame ülesande HTML-is
-    text.innerText = lisaUusYlesanne.value;
+// console.log(kustutaYlesanne);
+
+
+
+
+function kustuta(e){
+    if(e.target.parentElement.classList.contains('delete-item')){
+        console.log('hakkame kustutama');
+        e.target.parentElement.parentElement.remove(); 
+    }
+    
 }
-
-  
-
